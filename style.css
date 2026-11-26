@@ -1,0 +1,143 @@
+.grid-container {
+    display: grid;
+
+    grid-template-areas:
+        'header'
+        'menu'
+        'banner'
+        'iphone'
+        'samsung'
+        'footer';
+
+    background-color: white;
+    gap: 10px;
+    width: 95%;
+    margin: auto;
+}
+.header {
+    grid-area: header;
+    text-align: center;
+}
+
+.header img {
+    width: 100%;
+}
+.menu {
+    grid-area: menu;
+}
+.menu .navbar {
+    width: 100%;
+}
+.menu .nav-link {
+    color: white;
+}
+.menu .nav-link:hover {
+    
+    background-color: rgb(67, 46, 8);
+    color: white;
+    border-radius: 5px;
+}
+
+.menu .navbar-brand:hover {
+    color: orange;
+}
+.banner {
+    grid-area: banner;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.iphone {
+    grid-area: iphone;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+.samsung {
+    grid-area: samsung;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+.thongtin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #e4eff8;
+    border: 1px solid #ccc;
+    padding: 10px;
+    align-items: center;
+    gap: 5px;
+}
+.tt p {
+    margin-bottom: 7px;
+}
+.i {
+    font-weight: bold;
+    color: #123c65;
+}
+.c {
+    color: red;
+    font-weight: bold;
+    display: inline-block;
+}
+.dt {
+    text-align: center;
+}
+.dt img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+.dt button {
+    background-color: #e66b4a;
+    color: white;
+    border: none;
+    padding: 7px 20px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.dt button:hover {
+    background-color: red;
+}
+.footer {
+    grid-area: footer;
+}
+
+.footer img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+@media (min-width: 768px) {
+    .header {
+        grid-area: 1 / span 2;
+    }
+    .menu {
+        grid-area: 2 / span 2;
+    }
+    .banner {
+        grid-area: 3 / span 2;
+    }
+    .iphone {
+        grid-area: 4 / span 2;
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .samsung {
+        grid-area: 5 / span 2;
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer {
+        grid-area: 6 / span 2;
+    }
+}
